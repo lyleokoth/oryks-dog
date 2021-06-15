@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="model" default="$(find oryksdog_description)/urdf/oryksdog.xacro"/>
+    <param name="robot_description" command="$(find xacro)/xacro $(arg model)"/>  
+ 
+  <!--node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/-->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(find oryksdog_gazebo)/worlds/normal.world"/>
+        <arg name="debug" value="false" />
+        <arg name="gui" value="true" />
+        <arg name="paused" value="false"/>
+        <arg name="use_sim_time" value="false"/>
+        <arg name="headless" value="false"/>
+        <arg name="verbose" value="true"/>
+    </include>
+
+  <!--Launch Gazebo Simulator-->
+  <node name="spawn_model" pkg="gazebo_ros" type="spawn_model" 
+  args="-urdf -param robot_description -model oryksdog" output="screen"/>
+
+</launch>
