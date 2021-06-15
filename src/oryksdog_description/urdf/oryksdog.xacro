@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="oryksdog">
+
+    <xacro:include filename="$(find oryksdog_description)/oryksdog_properties.xacro"/>
+    <xacro:include filename="$(find oryksdog_description)/macros.xacro"/>
+    <xacro:include filename="$(find oryksdog_description)/materials.xacro"/>
+    <xacro:include filename="$(find oryksdog_description)/sensors.xacro"/>
+    <xacro:include filename="$(find oryksdog_description)/gazebo_properties.xacro"/>
+    <xacro:include filename="$(find oryksdog_description)/gazebo_plugins.xacro"/>
+    
+</robot>
