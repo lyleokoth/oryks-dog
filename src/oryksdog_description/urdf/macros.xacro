@@ -1,4 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="oryksdog">
     
+    <!-- Maximum torque -->
+    <xacro:property name="effort_limit" value="1.4" />
+
 </robot>
