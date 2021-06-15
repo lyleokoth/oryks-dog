@@ -1,4 +1,40 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="oryksdog">
-    
+
+    <!-- FR4 friction -->
+    <gazebo reference="FR4">
+        <mu1>1.0</mu1>
+        <mu2>1.0</mu2>
+        <minDepth>0.0002</minDepth>
+        <kp  value="1000000.0"/>
+        <kd  value="100.0"/>
+    </gazebo>
+
+    <!-- FL4 friction -->
+    <gazebo reference="FL4">
+        <mu1>1.0</mu1>
+        <mu2>1.0</mu2>
+        <minDepth>0.0002</minDepth>
+        <kp  value="1000000.0"/>
+        <kd  value="100.0"/>
+    </gazebo>
+
+    <!-- RR4 friction -->
+    <gazebo reference="RR4">
+        <mu1>1.0</mu1>
+        <mu2>1.0</mu2>
+        <minDepth>0.0002</minDepth>
+        <kp  value="1000000.0"/>
+        <kd  value="100.0"/>
+    </gazebo>
+
+    <!-- RL4 friction -->
+    <gazebo reference="RL4">
+        <mu1>1.0</mu1>
+        <mu2>1.0</mu2>
+        <minDepth>0.0002</minDepth>
+        <kp  value="1000000.0"/>
+        <kd  value="100.0"/>
+    </gazebo>
+        
 </robot>
