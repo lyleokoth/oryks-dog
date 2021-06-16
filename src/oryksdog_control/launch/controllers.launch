@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+    
+    <!-- Controllers -->
+    <rosparam file="$(find oryksdog_control)/config/controllers.yaml" command="load"/>
+    <node name="controller_spawner" pkg="controller_manager" type="spawner" output="screen" ns="oryksdog_controller"
+          args="FR1_joint FR2_joint FR3_joint
+                FL1_joint FL2_joint FL3_joint
+                RR1_joint RR2_joint RR3_joint
+                RL1_joint RL2_joint RL3_joint"/>
+    
+</launch>

@@ -7,7 +7,7 @@
         name="joint_state_publisher"/>
         
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
-
+    
     <include file="$(find gazebo_ros)/launch/empty_world.launch">
         <arg name="world_name" value="$(find oryksdog_gazebo)/worlds/normal.world"/>
         <arg name="debug" value="false" />
@@ -24,5 +24,6 @@
 
     <node pkg="rviz" type="rviz" name="rviz" respawn="false" output="screen"
         args="-d $(find oryksdog_description)/rviz/default.rviz"/>
-
+        
+    <include file="$(find oryksdog_control)/launch/controllers.launch" />
 </launch>
